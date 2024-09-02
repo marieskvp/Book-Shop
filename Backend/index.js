@@ -3,16 +3,11 @@ import mysql from "mysql" ;
 import cors from 'cors' ;
 const app = express();
 
-const msg = {
-  message:"Hi, :-)",
-  from:"Express server"
-}
-
 const db = mysql.createConnection({
-  host:"localhost",
-  user:"root",
-  password:"user125",
-  database:"test"
+  host:"sample_host", // host is requied
+  user:"sample_user",  // user name requied
+  password:"sample_password", // password requied
+  database:"sample_DBname" // Database name
 })
 
 app.use(express.json());
@@ -63,12 +58,6 @@ app.delete('/books/:id',(req,res)=>{
     if(err) return res.json(err) ;
     return res.json("Book has been deleted");
   })
-})
-
-
-
-app.get("/",(req,res)=>{
-  res.json(msg);
 })
 
 app.listen(8800,()=>{
