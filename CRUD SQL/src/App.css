@@ -1,0 +1,140 @@
+p,h2{
+  margin: 0;
+}
+body{
+  background-color:rgb(91, 96, 107);
+}
+.BookShop{
+  margin-top: 20px;
+}
+.App{
+  height: 100vh;
+  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  text-align: center;
+}
+
+.books{
+  display: flex;
+  gap: 10px;
+  position: relative;
+  justify-content: space-around;
+}
+.book{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid gray ;
+  background-color: burlywood;
+  align-items: center;
+}
+.book img{
+  width: 200px;
+  height:200px ;
+  object-fit: cover;
+  background-color: aquamarine;
+}
+
+.delete , .update , .formButton {
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: box-shadow 0.15s , font-weight 0.15s;
+}
+.delete{
+  background-color:red;
+  color:white;
+  width: 60px;
+}
+.update{
+  color:white;
+  background-color: green;
+}
+.delete:hover , .update:hover , .formButton:hover{
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.6);
+}
+.delete:active , .update:active , .formButton:active {
+  opacity: 0.6;
+}
+.addNewBook{
+  margin-top: 20px;
+  background-color: #8c2eeb;
+  border:none;
+  box-shadow:none;
+  pointer-events: none;
+  padding:6px 10px;
+  border-radius:20px;
+  transition: box-shadow 0.25s;
+}
+.styleLink{
+  text-decoration: none;
+  color:white;
+  font-size: 16px;
+  cursor: pointer;
+  pointer-events: all;
+}
+.addNewBook:hover{
+  box-shadow:  2px 2px 5px rgba(0,0,0,0.65);
+}
+.addNewBook:active{
+  opacity: 0.76;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap:20px ;
+}
+
+input {
+  width:250px ;
+  padding: 10px ;
+  border : 1px solid gray ;
+}
+
+.formButton {
+  color:white ;
+  background-color:lightcoral ;
+}
+
+.DeleteAlert{
+  position: absolute;
+  border:1px solid gray;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+.DeleteAlert div{
+  display: flex;
+  justify-content: space-around;
+}
+.DeleteAlert div button{
+  padding:3px 6px;
+  cursor: pointer;
+  border:none ;
+  border-radius: 5px;
+  transition: box-shadow 0.15s;
+  font-size: 18px;
+}
+#yesAlert{
+  color: white;
+  background-color: green;
+}
+#noAlert{
+  color: white;
+  background-color: red;
+}
+.DeleteAlert div button:active{
+  box-shadow: 1px 2px 3px rgba(1,1,1,0.15);
+}
+.updateLink{
+  text-decoration: none;
+  color:white;
+}
